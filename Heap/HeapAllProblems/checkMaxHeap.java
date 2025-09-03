@@ -1,4 +1,4 @@
-public class checkManHeap {
+public class checkMaxHeap {
     public static boolean isMinHeap(int []nums){
         int n = nums.length;
         for (int i = 0; i < n; i++) {
