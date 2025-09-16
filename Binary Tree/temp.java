@@ -1,20 +1,23 @@
 public class temp {
-    public static int maxContainers(int n, int w, int maxWeight) {
-        int totalContainers = n * n;
-        int count = 0;
-        int tempWeight = 0;
+    public static boolean canBeTypedWords(String pat, String tar) {
+       int n = pat.length();
+       int m = tar.length();
+       int i = 0;
+       int j = 0;
 
-        for (int i = 0; i < totalContainers; i++) {
-            if (tempWeight + w > maxWeight) break; // Stop if adding another container exceeds the limit
-            tempWeight += w;
-            count++;
-        }
-        return count;
+       while (i < n && j < m){
+           if (pat.charAt(i) == tar.charAt(j)){
+               i++;
+               j++;
+           }else {
+               i++;
+           }
+       }
+        return j == m;
     }
     public static void main(String[] args) {
-        int n = 2;
-        int w = 3;
-        int maxWeight = 15;
-        System.out.println(maxContainers(n, w, maxWeight));
+        String pat = "ufahs";
+        String tar = "aus";
+        System.out.println(canBeTypedWords(pat, tar));
     }
 }
