@@ -9,7 +9,7 @@ public class basicsOfRecursion {
     }
 
     public static void main(String[] args) {
-        print();  // Start recursion
+        print();  
     }
 }
 
